@@ -9,12 +9,16 @@ function setCart(c) {
   return cart;
 }
 
-function addToCart(item) {
- // write your code here
+function addToCart(itemName) {
+ var price = Math.floor(Math.random() * 100);
+ var itemObj = {[itemName] : price};
+ cart.push(itemObj);
 }
 
 function viewCart() {
-  // write your code here
+  if(cart.length===0) {
+    console.log("Your shopping cart is empty.");
+  }
 }
 
 function total() {
